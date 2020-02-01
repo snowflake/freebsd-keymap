@@ -1,9 +1,11 @@
-<!-- edit this file in ~/mac/sources-mine/freebsd-keyboard-map-gist -->
-
-This gist contains a sycons and vt console keyboard map for FreeBSD.
+This gist and respository contains syscons and vt console keyboard maps
+for FreeBSD.
 
 Its main application is when I'm accessing a Bytemark cloud server using
 the web interface to the console.
+
+It also contains a vt keymap for FreeBSD running in a VirtualBox virtual
+machine on macOS.
 
 I'm using macOS with a physical British keyboard with the macOS
 keyboard layout set to Unicode Hex Input. The keymap
@@ -55,7 +57,5 @@ This is very annoying!
 
 All other keys work.
 
----
 
-Created by GitHub user https://github.com/snowflake
 

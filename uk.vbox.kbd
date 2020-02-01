@@ -1,38 +1,36 @@
-# DJE custom keyboard map.
-# This is for the iMac UK keyboard in Unicode hex input mode
-# when sending to the FreeBSD console using the Bytemark console.
-# created 7/10/2018
-
-# For the # key type ALT-3
-# SHIFT-3 produces a ~
-# This is the best I can do at the moment
-#
-# To get keycodes, see the kbdscan port
-
-# $FreeBSD: releng/11.2/share/syscons/keymaps/uk.iso.kbd 270153 2014-08-18 20:58:17Z se $
+# $FreeBSD: releng/12.1/share/vt/keymaps/uk.macbook.kbd 342252 2018-12-19 22:46:03Z dab $
+# by James Wright <james.wright@jigsawdezign.com>
 #                                                         alt
+# Modified for UK keyboard on MacOS running in Virtual Box by Dave Evans
+# https://github.com/snowflake
+# 1/Feb/2020
+#
 # scan                       cntrl          alt    alt   cntrl lock
 # code  base   shift  cntrl  shift  alt    shift  cntrl  shift state
 # ------------------------------------------------------------------
-  000   nop    nop    nop    nop    '#'    nop    nop    nop     O
+  000   nop    nop    nop    nop    nop    nop    nop    nop     O
   001   esc    esc    esc    esc    esc    esc    debug  esc     O
-  002   '1'    '!'    nop    nop    '`'    '`'    nop    nop     O
-  003   '2'    '"'    nul    nul    '@'    '@'    nul    nul     O
+  002   '1'    '!'    nop    nop    '1'    '!'    nop    nop     O
+  003   '2'    '@'    nul    nul    0x20ac '@'    nul    nul     O
+#
+# 004 is the 2nd row '3'key
+# 004   '3'    0xa3   nop    nop    '#'    0xa3   nop    nop     O
   004   '3'    '#'    nop    nop    '#'    '#'    nop    nop     O
-  005   '4'    '$'    164    164    '4'    '$'    nop    nop     O
+#
+  005   '4'    '$'    nop    nop    '4'    '$'    nop    nop     O
   006   '5'    '%'    nop    nop    '5'    '%'    nop    nop     O
-  007   '6'    '^'    rs     rs     '^'    '^'    rs     rs      O
-  008   '7'    '&'    nop    nop    '['    '['    esc    esc     O
+  007   '6'    '^'    rs     rs     '6'    '^'    rs     rs      O
+  008   '7'    '&'    nop    nop    '7'    '&'    nop    nop     O
   009   '8'    '*'    nop    nop    '8'    '*'    nop    nop     O
-  010   '9'    '('    nop    nop    ']'    ']'    gs     gs      O
-  011   '0'    ')'    nop    nop    '{'    '{'    nop    nop     O
-  012   '-'    '_'    us     us     '|'    '|'    us     us      O
-  013   '='    '+'    nop    nop    '}'    '}'    nop    nop     O
+  010   '9'    '('    nop    nop    '9'    '('    nop    nop     O
+  011   '0'    ')'    nop    nop    '0'    ')'    nop    nop     O
+  012   '-'    '_'    us     us     '-'    '_'    us     us      O
+  013   '='    '+'    nop    nop    '='    '+'    nop    nop     O
   014   bs     bs     del    del    bs     bs     del    del     O
   015   ht     btab   nop    nop    ht     btab   nop    nop     O
   016   'q'    'Q'    dc1    dc1    'q'    'Q'    dc1    dc1     C
   017   'w'    'W'    etb    etb    'w'    'W'    etb    etb     C
-  018   'e'    'E'    enq    enq    164    'E'    enq    enq     C
+  018   'e'    'E'    enq    enq    'e'    'E'    enq    enq     C
   019   'r'    'R'    dc2    dc2    'r'    'R'    dc2    dc2     C
   020   't'    'T'    dc4    dc4    't'    'T'    dc4    dc4     C
   021   'y'    'Y'    em     em     'y'    'Y'    em     em      C
@@ -54,10 +52,14 @@
   037   'k'    'K'    vt     vt     'k'    'K'    vt     vt      C
   038   'l'    'L'    ff     ff     'l'    'L'    ff     ff      C
   039   ';'    ':'    nop    nop    ';'    ':'    nop    nop     O
-  040   '''    '@'    nul    nul    '''    '@'    nul    nul     O
-  041   '`'    172    nop    nop    '|'    '|'    nop    nop     O
+  040   '''    '"'    nop    nop    '''    '"'    nop    nop     O
+#
+# 041 is the key on the far LHS, under the ESC key 
+#  041   0xa7   0xb1   nop    nop    0xa7   0xb1   nop    nop     O
+  041   nop    nop    nop    nop    nop    nop    nop    nop     O
+#
   042   lshift lshift lshift lshift lshift lshift lshift lshift  O
-  043   '#'    '~'    nop    nop    '#'    '~'    nop    nop     O
+  043   '\'    '|'    fs     fs     '\'    '|'    fs     fs      O
   044   'z'    'Z'    sub    sub    'z'    'Z'    sub    sub     C
   045   'x'    'X'    can    can    'x'    'X'    can    can     C
   046   'c'    'C'    etx    etx    'c'    'C'    etx    etx     C
@@ -100,7 +102,7 @@
   083   del    '.'    '.'    '.'    '.'    '.'    boot   boot    N
   084   nop    nop    nop    nop    nop    nop    nop    nop     O
   085   nop    nop    nop    nop    nop    nop    nop    nop     O
-  086   '\'    '|'    fs     fs     '\'    '|'    fs     fs      O
+  086   '`'    '~'    nop    nop    '`'    '~'    nop    nop     O
   087   fkey11 fkey23 fkey35 fkey47 scr11  scr11  scr11  scr11   O
   088   fkey12 fkey24 fkey36 fkey48 scr12  scr12  scr12  scr12   O
   089   cr     cr     nl     nl     cr     cr     nl     nl      O
@@ -117,7 +119,7 @@
   100   fkey58 fkey58 fkey58 fkey58 fkey58 fkey58 fkey58 fkey58  O
   101   fkey59 fkey59 fkey59 fkey59 fkey59 fkey59 fkey59 fkey59  O
   102   fkey60 paste  fkey60 fkey60 fkey60 fkey60 fkey60 fkey60  O
-  103	fkey61 fkey61 fkey61 fkey61 fkey61 fkey61 boot   fkey61  O
+  103   fkey61 fkey61 fkey61 fkey61 fkey61 fkey61 boot   fkey61  O
   104   slock  saver  slock  saver  susp   nop    susp   nop     O
   105   fkey62 fkey62 fkey62 fkey62 fkey62 fkey62 fkey62 fkey62  O
   106   fkey63 fkey63 fkey63 fkey63 fkey63 fkey63 fkey63 fkey63  O
