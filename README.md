@@ -1,14 +1,12 @@
-This gist and respository contains syscons and vt console keyboard maps
-for FreeBSD.
+<!-- edit this file in ~/mac/sources-mine/freebsd-keyboard-map-gist -->
+
+This gist contains a sycons and vt console keyboard map for FreeBSD.
 
 Its main application is when I'm accessing a Bytemark cloud server using
 the web interface to the console.
 
-It also contains a vt keymap for FreeBSD running in a VirtualBox virtual
-machine on macOS.
-
 I'm using macOS with a physical British keyboard with the macOS
-keyboard layout set to Unicode Hex Input. The keymap
+keyboard layout set to British. The keymap
 probably won't work with other configurations.
 
 To install as root:
@@ -17,11 +15,11 @@ To install as root:
 
 To load when in the console:
 
-   kbdcontrol  -l uk.iso-dje-hex.kbd
+   kbdcontrol  -l uk.mac-british.bytemark.kbd
 
 You should also put the keymap in your /etc/rc.conf:
 
-keymap="uk.iso-dje-hex.kbd"
+keymap="uk.mac-british.bytemark.kbd"
 
 All keys should now work, although there is no way of
 entering a pound sign.  ALT-3 proudces the # sign.
@@ -57,5 +55,9 @@ This is very annoying!
 
 All other keys work.
 
+I could not get uk.iso-dje-hex.kbd to wort with the British or Unicode Hex keyboards. It seems that two keys produce the same scan codes.
 
+---
+
+Created by GitHub user https://github.com/snowflake
 
