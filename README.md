@@ -11,7 +11,13 @@ probably won't work with other configurations.
 
 To install as root:
 
-   make install
+If using Bytemark server:
+
+   make install-bm
+
+If using VirtualBox:
+
+   make install-vb
 
 To load when in the console:
 
@@ -20,6 +26,12 @@ To load when in the console:
 You should also put the keymap in your /etc/rc.conf:
 
 keymap="uk.mac-british.bytemark.kbd"
+
+or
+
+keymap="uk.mac-british.virtualbox.kbd"
+
+----------------
 
 All keys should now work, although there is no way of
 entering a pound sign.  ALT-3 proudces the # sign.
@@ -57,7 +69,12 @@ All other keys work.
 
 I could not get uk.iso-dje-hex.kbd to wort with the British or Unicode Hex keyboards. It seems that two keys produce the same scan codes.
 
----
+--------
+
+Maintainer note:
+Files are maintained in mac/sources-mine/freebsd-keyboard-map-gist
+
+---------
 
 Created by GitHub user https://github.com/snowflake
 
