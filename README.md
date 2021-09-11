@@ -1,9 +1,11 @@
 <!-- edit this file in ~/mac/sources-mine/freebsd-keyboard-map-gist -->
+# FreeBSD keymaps for macOS acccesing VirtualBox and Bytemark cloud server
 
 This gist contains a sycons and vt console keyboard map for FreeBSD.
 
 Its main application is when I'm accessing a Bytemark cloud server using
-the web interface to the console.
+the web interface to the console. I have also devised a keymap for
+FreeBSD running on VirtualBox.
 
 I'm using macOS with a physical British keyboard with the macOS
 keyboard layout set to British. The keymap
@@ -13,23 +15,23 @@ To install as root:
 
 If using Bytemark server:
 
-   make install-bm
+   `make install-bm`
 
 If using VirtualBox:
 
-   make install-vb
+   `make install-vb`
 
 To load when in the console:
 
-   kbdcontrol  -l uk.mac-british.bytemark.kbd
+   `kbdcontrol  -l uk.mac-british.bytemark.kbd`
 
 You should also put the keymap in your /etc/rc.conf:
 
-keymap="uk.mac-british.bytemark.kbd"
+`keymap="uk.mac-british.bytemark.kbd"`
 
 or
 
-keymap="uk.mac-british.virtualbox.kbd"
+`keymap="uk.mac-british.virtualbox.kbd"`
 
 ----------------
 
@@ -57,17 +59,17 @@ If accessing the console at cloud hosting
 and you are stuck with uk.kbd and us.kbd - maybe you have
 booted from a CDROM.
 
-kbdcontrol -l uk.kbd
+`kbdcontrol -l uk.kbd`
 
 Switch the Mac to British keyboard.
 
-'#' is now ALT-3
+'#' is now ALT-3.
 SHIFT-3 generates a code to go to the begining of the line.
 This is very annoying!
 
 All other keys work.
 
-I could not get uk.iso-dje-hex.kbd to wort with the British or Unicode Hex keyboards. It seems that two keys produce the same scan codes.
+I could not get `uk.iso-dje-hex.kbd` to work with the British or Unicode Hex keyboards. It seems that two keys produce the same scan codes.
 
 --------
 
