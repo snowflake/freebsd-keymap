@@ -1,5 +1,5 @@
 <!-- edit this file in ~/mac/sources-mine/freebsd-keyboard-map-gist -->
-# FreeBSD keymaps for macOS acccesing VirtualBox and Bytemark cloud server
+# FreeBSD keymaps for macOS accessing VirtualBox and Bytemark cloud server
 
 This gist contains a sycons and vt console keyboard map for FreeBSD.
 
